@@ -23,8 +23,8 @@ class Search extends React.Component {
 
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
-        <label> Manifest via Search: </label>
+      <form onSubmit={this.handleSubmit} className="search">
+        <label> Vision Search: </label>
           <input 
             type="text" 
             onChange={this.onSearchChange}
@@ -33,7 +33,7 @@ class Search extends React.Component {
 					  placeholder="Search..."
           />
      
-        <button type="submit" value="Find your vision">Find your vision</button>
+        <button type="submit" value="Find your vision">Search Images</button>
       </form>
     )
   }
