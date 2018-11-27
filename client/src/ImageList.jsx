@@ -1,19 +1,22 @@
 import React from 'react';
 import Image from './Image.jsx';
 
-
-const ImageList = (props) => {
+const ImageList = props => {
   const results = props.data;
-      const images =results.map(image => <Image url={image.urls.small} key={image.id} selectImage={props.selectImage} toggleHidden={props.toggleHidden}/>)
+  const images = results.map (image => (
+    <Image
+      url={image.urls.small}
+      key={image.id}
+      selectImage={props.selectImage}
+      toggleHidden={props.toggleHidden}
+    />
+  ));
 
-  return(
+  return (
     <div className="img-list">
-      <h4> Search Results </h4>
-            {images}
-        </div>
-  )
-}
-
-
+      {images}
+    </div>
+  );
+};
 
 export default ImageList;
