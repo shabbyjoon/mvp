@@ -10,11 +10,6 @@ class Board extends React.Component {
       datecreated: '',
       message: '',
       imageUrl1: '',
-      imageUrl2: '',
-      imageUrl3: '',
-      imageUrl4: '',
-      imageUrl5: '',
-      imageUrl6: '',
     };
     this.renderSquareTwo = this.renderSquareTwo.bind (this);
     this.handleChange = this.handleChange.bind (this);
@@ -23,7 +18,6 @@ class Board extends React.Component {
   }
 
   handleImageClick (event) {
-    console.log ('square was clicked!', event.target.id);
     this.setState ({
       squareId: event.target.id,
     });
@@ -67,14 +61,13 @@ class Board extends React.Component {
     event.preventDefault ();
     this.saveUrl ();
     this.props.submitCard (this.state);
-    alert ('One V-card coming right up!');
+    alert ('Vision Card Created! Navigate to the Your Cards panel to view :)');
   }
 
   render () {
     return (
       <div className="form-container">
         {this.renderSquareTwo (1)}
-
         <div className="boardForm">
           <form>
             <label>PostCard Title:</label>

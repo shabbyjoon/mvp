@@ -72,19 +72,12 @@ class App extends React.Component {
   }
 
   selectImages (imageUrl) {
-    // if (!this.state.imageClicked) {
     this.setState ({
       selectedImage1: imageUrl,
       imageClicked: !this.state.imageClicked,
       imageClickCount: this.state.imageClickCount + 1,
       boardImages: [...this.state.boardImages, imageUrl],
     });
-    console.log ('board urls in app component', this.state.boardImages);
-    console.log ('selected image in app component', this.state.selectedImage1);
-    console.log (
-      'image click countin app component',
-      this.state.imageClickCount
-    );
   }
 
   render () {

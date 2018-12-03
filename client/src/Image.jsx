@@ -16,16 +16,8 @@ class Image extends React.Component {
     });
   }
   handleImageClick (event) {
-    //this.togglePopup();
-    // this.setState ({
-    //   isImageHidden: !this.state.isImageHidden,
-    // });
-    console.log ('i was clicked', event.target.src);
     this.props.toggleHidden ();
-    // if(!this.state.isImageHidden) {
     this.props.selectImage (event.target.src);
-    //}
-    //this.togglePopup()
   }
 
   render () {
