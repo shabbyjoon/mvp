@@ -129,6 +129,10 @@ div.boardForm {
   overflow-x: hidden;
 }
 
+.cardNames {
+  padding: 1vw;
+}
+
 .card-display {
   display: flex;
   justify-content: space-between;
@@ -136,6 +140,15 @@ div.boardForm {
 .img-card-name{
   font-weight: bold;
   padding-right: 8%;
+}
+
+.img-card-message {
+  top: 5vh;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  left: 1vw;
+  font-size: 1.1vw;
 }
 
 .card-display{
@@ -168,11 +181,17 @@ div.boardForm {
 
 .img {
   flex:1 1 21%;
+  opacity: .7;
+}
 
+.img:hover {
+  opacity: 1.0;
 }
 .main-content {
   width: 90%;
   max-width: 1025px;
   margin: auto;
 }
+
+
 
